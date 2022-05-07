@@ -1,0 +1,139 @@
+/*=== GENERAL =====================================*/
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: hsl(170, 100%, 26%);
+  --headline: hsl(210, 11%, 15%);
+  --paragraph: hsl(210, 9%, 31%);
+  --brand-beige: #fffaf1;
+  --brand-light: #dce9e2;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'DM Sans';
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/*/ ======= HEADER ================================*/
+
+header::before {
+  content: '';
+  width: 100vw;
+  height: 108rem;
+  background-color: var(--brand-light);
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header {
+  margin-top: 4.1rem;
+  width: 37.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+header h4 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+header h1 {
+  font-size: 3.4rem;
+  color: var(--headline);
+  line-height: 130%;
+  margin-bottom: 2.4rem;
+}
+
+header p {
+  color: var(--paragraph);
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 3.2rem;
+}
+
+header button {
+  color: white;
+  text-transform: uppercase;
+  size: 1.2rem;
+  font-weight: 500;
+
+  height: 5rem;
+  width: 16rem;
+  margin: auto;
+
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.8rem;
+
+  margin-bottom: 6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+header button svg {
+  height: 2rem;
+}
+
+header img {
+  width: 26.4rem;
+  display: block;
+  margin-inline: auto;
+  object-position: 0 2rem;
+}
+
+.stats {
+  width: 32.7rem;
+  padding-block: 4rem;
+  /**/
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  margin-inline: auto;
+
+  background-color: var(--brand-beige);
+  border: 1px solid var(--brand-light);
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.stat h3 {
+  font-size: 4.8rem;
+  color: var(--headline);
+  line-height: 130%;
+
+  margin-bottom: 0.4rem;
+}
+
+.stat p {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+/*/ ======= NAVIGATION =============================*/
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
