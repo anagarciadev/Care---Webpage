@@ -12,6 +12,7 @@
   --brand-beige: #fffaf1;
   --brand-light: #dce9e2;
   font-size: 62.5%;
+  --nav-height: 7.2rem;
 }
 
 body {
@@ -20,12 +21,23 @@ body {
   text-align: center;
 }
 
+.wrapper {
+  width: 37.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-inline: 2.4rem;
+}
+
 /*/ ======= HEADER ================================*/
+
+header {
+  margin-top: calc(4.1rem + var(--nav-height));
+}
 
 header::before {
   content: '';
   width: 100vw;
-  height: 108rem;
+  height: calc(108rem + var(--nav-height));
   background-color: var(--brand-light);
   display: block;
 
@@ -33,15 +45,6 @@ header::before {
   top: 0;
   left: 0;
   z-index: -1;
-}
-
-header {
-  margin-top: 4.1rem;
-  width: 37.5rem;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
 }
 
 header h4 {
@@ -63,6 +66,7 @@ header p {
   font-weight: 400;
   line-height: 150%;
   margin-bottom: 3.2rem;
+  padding: 1rem 2rem;
 }
 
 header button {
@@ -100,7 +104,7 @@ header img {
 .stats {
   width: 32.7rem;
   padding-block: 4rem;
-  /**/
+
   padding-left: 4rem;
   padding-right: 4rem;
 
@@ -134,6 +138,30 @@ header img {
 
 nav {
   display: flex;
+
+  height: var(--nav-height);
+
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+nav .wrapper {
+  display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+nav.scroll {
+  background: var(--primary-color);
+  width: 100vw;
+}
+
+nav.scroll svg:nth-child(1) path{
+  fill: white;
+}
+
+nav.scroll svg:nth-child(2) path{
+  stroke: white;
 }
