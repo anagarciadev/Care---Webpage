@@ -173,7 +173,7 @@ nav.scroll svg:nth-child(1) path {
 }
 
 nav.scroll svg:nth-child(2) path {
-  stroke: white;
+  stroke: black;
 }
 
 /*/ ======= MENU EXPANDED =============================*/
