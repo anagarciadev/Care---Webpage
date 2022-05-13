@@ -2,6 +2,7 @@
 
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -13,6 +14,11 @@
   --brand-light: #dce9e2;
   font-size: 62.5%;
   --nav-height: 7.2rem;
+}
+
+html,body {
+width: 100%;
+height: 100%;
 }
 
 body {
@@ -28,6 +34,10 @@ body {
   padding-inline: 2.4rem;
 }
 
+ul{
+  list-style: none;
+}
+
 /*/ ======= HEADER ================================*/
 
 header {
@@ -36,7 +46,7 @@ header {
 
 header::before {
   content: '';
-  width: 100vw;
+  width: 100%;
   height: calc(108rem + var(--nav-height));
   background-color: var(--brand-light);
   display: block;
@@ -158,10 +168,45 @@ nav.scroll {
   width: 100vw;
 }
 
-nav.scroll svg:nth-child(1) path{
+nav.scroll svg:nth-child(1) path {
   fill: white;
 }
 
-nav.scroll svg:nth-child(2) path{
+nav.scroll svg:nth-child(2) path {
   stroke: white;
+}
+
+/*/ ======= MENU EXPANDED =============================*/
+body.menu-expanded {
+  overflow: hidden;
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu{
+  opacity: 1;
+  visibility: visible;
+
+}
+
+
+body.menu-expanded .menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--primary-color);
+
+  width: 100vw;
+  height: 100vh;
+}
+
+body.menu-expanded nav{
+  position: relative;
+
 }
