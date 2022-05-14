@@ -16,9 +16,10 @@
   --nav-height: 7.2rem;
 }
 
-html,body {
-width: 100%;
-height: 100%;
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -34,7 +35,7 @@ body {
   padding-inline: 2.4rem;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
@@ -181,6 +182,10 @@ body.menu-expanded {
   overflow: hidden;
 }
 
+body.menu-expanded > :not(nav) {
+  display: none;
+}
+
 .menu,
 .close-menu,
 body.menu-expanded .open-menu {
@@ -189,14 +194,12 @@ body.menu-expanded .open-menu {
 }
 
 body.menu-expanded .menu,
-body.menu-expanded .close-menu{
+body.menu-expanded .close-menu {
   opacity: 1;
   visibility: visible;
-
 }
 
-
-body.menu-expanded .menu{
+body.menu-expanded .menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -204,9 +207,57 @@ body.menu-expanded .menu{
 
   width: 100vw;
   height: 100vh;
+
+  padding-top: var(--nav-height);
 }
 
-body.menu-expanded nav{
+body.menu-expanded nav {
   position: relative;
+}
 
+.menu ul:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  margin-top: 6rem;
+
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+}
+
+.menu ul a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu .button {
+  background: white;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  text-transform: uppercase;
+
+  text-decoration: none;
+  color: var(--primary-color);
+
+  display: inline-block;
+  padding: 1.2rem;
+
+  margin-top: 4.8rem;
+  margin-bottom: 8rem;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button {
+  position: relative;
+  z-index: 10;
 }
