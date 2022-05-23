@@ -25,13 +25,15 @@ body {
 body {
   font-family: 'DM Sans';
   font-size: 1.6rem;
+
   text-align: center;
+
+  overflow: overlay;
 }
 
 .wrapper {
   width: 37.5rem;
-  margin-right: auto;
-  margin-left: auto;
+  margin-inline: auto;
   padding-inline: 2.4rem;
 }
 
@@ -167,14 +169,22 @@ nav .wrapper {
 nav.scroll {
   background: var(--primary-color);
   width: 100vw;
+  position: fixed;
+  top: 0;
 }
 
 nav.scroll svg:nth-child(1) path {
   fill: white;
 }
 
-nav.scroll svg:nth-child(2) path {
-  stroke: black;
+nav.scroll button path {
+  stroke: white;
+}
+
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /*/ ======= MENU EXPANDED =============================*/
@@ -226,7 +236,7 @@ body.menu-expanded nav {
   line-height: 3.1rem;
 }
 
-.menu ul a {
+.menu ul li a {
   color: white;
   text-decoration: none;
 }
@@ -260,4 +270,12 @@ body.menu-expanded .logo,
 body.menu-expanded button {
   position: relative;
   z-index: 10;
+}
+
+body.menu-expanded .logo path {
+  fill: white;
+}
+
+body.menu-expanded button path {
+  stroke: white;
 }
