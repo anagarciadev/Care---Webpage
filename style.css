@@ -17,7 +17,7 @@
   --nav-height: 7.2rem;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -48,36 +48,33 @@ ul {
   list-style: none;
 }
 
-img{
+img {
   max-width: 100%;
 }
 
-section{
+section {
   padding-block: 10rem;
 }
 
-section header h4{
+section header h4 {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0.08rem;
   color: var(--primary-color);
   text-transform: uppercase;
-  
 
   margin-bottom: 1.6rem;
-
 }
 
-section header h2{
+section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
 
   color: var(--headline);
-  
 }
 
-section header h1{
+section header h1 {
   font-size: 3.4rem;
   color: var(--headline);
   line-height: 130%;
@@ -85,14 +82,12 @@ section header h1{
   margin-bottom: 2.4rem;
 }
 
-section .content p{
+section .content p {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 150%;
 
-
   color: var(--paragraph);
-
 }
 
 /*/ ======= NAVIGATION =============================*/
@@ -117,8 +112,6 @@ nav .wrapper {
 
 nav.scroll {
   background: var(--primary-color);
-
-  
 }
 
 nav.scroll .logo path {
@@ -176,9 +169,7 @@ body.menu-expanded .menu {
   transition: transform 300ms;
 
   transform: translateY(0);
-
 }
-
 
 .menu ul:nth-child(1) {
   display: flex;
@@ -235,7 +226,6 @@ body.menu-expanded .logo path {
 body.menu-expanded button path {
   stroke: white;
 }
-
 
 /*/ ======= #HOME ================================*/
 
@@ -330,13 +320,12 @@ body.menu-expanded button path {
   line-height: 150%;
 }
 
-
 /*/ ======= SERVICES =============================*/
-#services h2{
+#services h2 {
   margin-bottom: 6rem;
 }
 
-#services .cards{
+#services .cards {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -353,7 +342,7 @@ body.menu-expanded button path {
   border-radius: 1rem;
 }
 
-#services .card h3{
+#services .card h3 {
   margin-block: 1.6rem;
 }
 
@@ -361,15 +350,13 @@ body.menu-expanded button path {
 #about {
   text-align: left;
   background-color: var(--brand-beige);
-
 }
 
-#about header h2{
+#about header h2 {
   margin-bottom: 2.4rem;
 }
 
-#about .content p{
+#about .content p {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
-
 }
