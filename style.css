@@ -10,9 +10,12 @@
   --primary-color: hsl(170, 100%, 26%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
+
   --brand-beige: #fffaf1;
   --brand-light: #dce9e2;
   --bg-light: hsl(180, 14%, 97%, 1);
+  --brand-dark: hsl(170, 100%, 14%);
+
   font-size: 62.5%;
   --nav-height: 7.2rem;
 }
@@ -112,6 +115,19 @@ section .content p {
   gap: 1.6rem;
 
   text-decoration: none;
+
+  transition: background 200ms;
+}
+
+.button:hover {
+  background-color: var(--brand-dark);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
 }
 
 /*/ ======= NAVIGATION =============================*/
@@ -228,13 +244,6 @@ body.menu-expanded .menu {
 
   margin-top: 4.8rem;
   margin-bottom: 8rem;
-}
-
-.social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.2rem;
 }
 
 body.menu-expanded .logo,
@@ -381,6 +390,8 @@ body.menu-expanded button path {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+
+  margin-bottom: 3.2rem;
 }
 
 #contact ul li {
@@ -389,5 +400,31 @@ body.menu-expanded button path {
   gap: 0.8rem;
 }
 
-#contact .button {
+/*/ ======= FOOTER =============================*/
+footer {
+  background-color: var(--primary-color);
+  padding-block: 6rem;
+
+  text-align: left;
+  color: white;
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+
+footer .logo path {
+  fill: white;
+}
+
+footer p {
+  color: var(--brand-beige);
+  line-height: 2;
+
+  margin-bottom: 3rem;
+}
+
+footer .social-links {
+  justify-content: flex-start;
 }
