@@ -7,7 +7,7 @@
 }
 
 :root {
-  --hue: 290;
+  --hue: 170;
   --primary-color: hsl( var(--hue), 100%, 26%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
@@ -43,7 +43,7 @@ body {
 }
 
 .wrapper {
-  width: 37.5rem;
+  width: min(50rem, 100%);
   margin-inline: auto;
   padding-inline: 2.4rem;
 }
@@ -160,7 +160,7 @@ body.menu-expanded #navigation .logo path{
   stroke: white;
 }
 
-/*/ ======= NAVIGATION =============================*/
+/* ======= NAVIGATION =============================*/
 
 nav {
   display: flex;
@@ -191,7 +191,13 @@ nav button {
   cursor: pointer;
 }
 
-/*/ ======= MENU EXPANDED =============================*/
+nav .menu,
+nav .close-menu {
+  position: fixed;
+
+}
+
+/* ======= MENU EXPANDED =============================*/
 body.menu-expanded {
   overflow: hidden;
   background-color: var(--primary-color);
@@ -219,7 +225,6 @@ body.menu-expanded .close-menu {
 }
 
 body.menu-expanded .menu {
-  position: fixed;
   top: 0;
   left: 0;
   background: var(--primary-color);
@@ -291,7 +296,7 @@ body.menu-expanded button path {
   stroke: white;
 }
 
-/*/ ======= #HOME ================================*/
+/* ======= #HOME ================================*/
 
 #home {
   padding-top: calc(4.1rem + var(--nav-height));
@@ -334,7 +339,7 @@ body.menu-expanded button path {
 }
 
 #home .stats {
-  width: 32.7rem;
+  width: 100%;
   padding-block: 4rem;
 
   padding-left: 4rem;
@@ -367,7 +372,7 @@ body.menu-expanded button path {
   line-height: 150%;
 }
 
-/*/ ======= SERVICES =============================*/
+/* ======= SERVICES =============================*/
 #services h2 {
   margin-bottom: 6rem;
 }
@@ -394,7 +399,7 @@ body.menu-expanded button path {
 }
 
 
-/*/ ======= ABOUT =============================*/
+/* ======= ABOUT =============================*/
 #about {
   text-align: left;
   background-color: var(--brand-beige);
@@ -409,7 +414,7 @@ body.menu-expanded button path {
   margin-bottom: 6rem;
 }
 
-/*/ ======= CONTACT =============================*/
+/* ======= CONTACT =============================*/
 #contact {
   text-align: left;
 }
@@ -432,7 +437,7 @@ body.menu-expanded button path {
   gap: 0.8rem;
 }
 
-/*/ ======= FOOTER =============================*/
+/* ======= FOOTER =============================*/
 footer {
   background-color: var(--primary-color);
   padding-block: 6rem;
@@ -462,7 +467,7 @@ footer .social-links {
 }
 
 
-/*/ ======= BACK TO TOP BUTTON =============================*/
+/* ======= BACK TO TOP BUTTON =============================*/
 #backToTopButton {
   position: fixed;
   bottom: 1rem;
@@ -481,3 +486,36 @@ footer .social-links {
   visibility: visible;
 }
 
+
+/* ======= RESPONSIVE =============================*/
+
+@media (min-width: 1024px) {
+  /* ======= GERAL =======*/
+  .wrapper {
+    width: min(112rem, 100%);
+  }
+  /* ======= GERAL =======*/
+
+  /* reset */
+  nav#navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    font-size: initial;
+    color: initial;
+    background-color: initial;
+    font-weight: initial;
+    font-size: initial;
+  }
+
+  nav#navigation .close-menu,
+  nav#navigation .open-menu,
+  nav#navigation .social-links {
+    display: none;
+  }
+
+}
