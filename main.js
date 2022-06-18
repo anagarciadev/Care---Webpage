@@ -1,4 +1,4 @@
-window.addEventListener('scroll' , onScroll )
+window.addEventListener('scroll', onScroll)
 
 onScroll()
 
@@ -22,8 +22,6 @@ function showBackToTopButtonOnScroll() {
     backToTopButton.classList.remove('show')
   }
 }
-
-
 
 function openMenu() {
   document.body.classList.add('menu-expanded')
