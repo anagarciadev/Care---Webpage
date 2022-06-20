@@ -1,10 +1,17 @@
 window.addEventListener('scroll', onScroll)
 
 onScroll()
-
 function onScroll() {
   showNavOnScroll()
   showBackToTopButtonOnScroll()
+  activateMenuAtCurrentSection(home)
+}
+
+function activateMenuAtCurrentSection() {
+  const targetLine = scrollY + innerHeight / 2
+  const sectionTop = home.offsetTop
+  const sectionHeight = home.offsetHeight
+  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
 }
 
 function showNavOnScroll() {
@@ -16,7 +23,7 @@ function showNavOnScroll() {
 }
 
 function showBackToTopButtonOnScroll() {
-  if (scrollY > 400) {
+  if (scrollY > 550) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
@@ -35,6 +42,13 @@ ScrollReveal({
   origin: 'top',
   distance: '3rem',
   duration: '700'
-}).reveal(
-  '#home, #home img, #home .stats, #services, #services header, #services .card, #about, #about header, #about .content'
-)
+}).reveal(`
+  #home, 
+  #home img, 
+  #home .stats, 
+  #services, 
+  #services header, 
+  #services .card, 
+  #about, 
+  #about header, 
+  #about .content`)
